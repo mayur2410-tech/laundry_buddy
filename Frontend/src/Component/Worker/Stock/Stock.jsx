@@ -47,9 +47,9 @@ const Stock = () => {
     setLoading(true);
     try {
       const [stockRes, analyticsRes, alertsRes] = await Promise.all([
-        axios.get('http://localhost:3000/stock/all'),
-        axios.get('http://localhost:3000/stock/analytics'),
-        axios.get('http://localhost:3000/stock/alerts'),
+        axios.get('https://laundry-buddy-yysq.onrender.com/stock/all'),
+        axios.get('https://laundry-buddy-yysq.onrender.com/stock/analytics'),
+        axios.get('https://laundry-buddy-yysq.onrender.com/stock/alerts'),
       ]);
 
       setStockItems(stockRes.data.data || []);
@@ -95,7 +95,7 @@ const Stock = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:3000/stock/${selectedStock._id}/consume`,
+        `https://laundry-buddy-yysq.onrender.com/stock/${selectedStock._id}/consume`,
         {
           quantityUsed: quantity,
           reason: consumptionForm.reason,
@@ -154,7 +154,7 @@ const Stock = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:3000/stock/${selectedStock._id}/add`,
+        `https://laundry-buddy-yysq.onrender.com/stock/${selectedStock._id}/add`,
         {
           quantityToAdd: quantity,
           notes: restockForm.notes,
