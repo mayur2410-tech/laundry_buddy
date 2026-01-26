@@ -29,7 +29,7 @@ cd mcp-serve
 npm install
 ```
 
-2. Make sure your backend server is running on `http://localhost:3000`
+2. Make sure your backend server is running on `https://laundry-buddy-yysq.onrender.com`
 
 3. Run the MCP server:
 ```bash
@@ -39,7 +39,7 @@ npm start
 ## Configuration
 
 The server is configured to connect to:
-- Base URL: `http://localhost:3000`
+- Base URL: `https://laundry-buddy-yysq.onrender.com`
 - Login endpoint: `/user/login`
 - Submit order endpoint: `/user/submit-order`
 
